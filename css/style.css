@@ -1,0 +1,49 @@
+.wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; color: white; }
+.wrapper code { background: #F5F5F5; padding: 2px 6px; }
+.wrapper .container { color: black; }
+
+.page-links {
+    color: white;
+    font-weight: bolder;
+}
+
+body {
+    min-height: 100vh;
+    --opacidad-negro: 0.5;
+    background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("https://www.univision.com/proxy/api/cached/picture?href=https%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2Fassets%2Fvixes%2Fe%2Fel_misterioso_origen_del_virus_de_the_walking_dead_portada.jpg&width=0&height=0&ratio_width=1240&ratio_height=698&format=webp");
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    overflow: auto;
+}
+
+.text-gray {
+    color: #aaa;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+}
+
+.navbar-dark {
+    background-color: black !important;
+}
+
+.navbar-dark * {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+a.nav-link {
+    background-color: skyblue;
+}
+
+.list-group-item {
+    background-color: #fffd;
+}
+
+.disheslist {
+    list-style: none;
+    margin-top: 1em;
+}
