@@ -48,8 +48,12 @@ $dotenv->safeLoad();
     if (isset($_POST["req"])) {
         switch ($_POST["req"]) {
             
-            case 'generateneworder':
-                setOrder($mysqli);
+            case 'neworder':
+                $result = setOrder($mysqli, $_POST);
+                break;
+
+            case 'deleteorders':
+                deleteorders($mysqli);
                 break;
 
             default:
