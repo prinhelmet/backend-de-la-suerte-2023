@@ -27,6 +27,11 @@
                                 <?= showDishes($row['dishes']); ?>
                             </div>
                         </div>
+                        <form method="post">
+                            <input type="hidden" name="req" value="dispachorder" readonly>
+                            <input type="hidden" name="id" value="<?= $row['id']; ?>">
+                            <input type="submit" value="Procesar comanda">
+                        </form>
                     </li>
                     <?php
                     }

@@ -5,7 +5,7 @@ require 'constantes.php';
 date_default_timezone_set('UTC');
 
 function getOrders($mysqli) {
-    $sql = "SELECT * FROM orders ORDER BY special DESC, createdAt ASC";
+    $sql = "SELECT * FROM orders WHERE dispachedAt is NULL ORDER BY special DESC, createdAt ASC";
     return $mysqli->query($sql);
 }
 
@@ -75,4 +75,17 @@ function isSpecialDish($dish){
 
 function isFullKitchen($mysqli){
     return MAX_ORDERS <= mysqli_num_rows(getOrders($mysqli));
+}
+
+function dispachorder($mysqli, $post){
+    if (isset($post['id'])) {
+        $dispachedAt = date('Y-m-d\TH:i:sp');
+        $sql = "UPDATE orders SET dispachedAt='$dispachedAt' WHERE id=" . $post['id'];
+        if ($mysqli->query($sql)) {
+            return 'Comanda despachada';
+        } else {
+            return 'Error al intentar despachar la comanda';
+        }
+    }
+    return 'Error al borrar. ID no válido.';
 }
