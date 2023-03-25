@@ -2,14 +2,14 @@
 </div>
 <div class="container py-5">
     <?php if(mysqli_num_rows(getOrders($mysqli)) > 0) : ?>
-
-        <div class="options">
-            <form method="post" action="index.php">
+        <form method="post" action="index.php">
+            <ul class="flex-outer options">
                 <input type="hidden" name="req" value="deleteorders" readonly>
-                <input type="submit" value="Procesar comandas">
-            </form>
-        </div>
-        
+                <li>
+                    <input type="submit" value="Procesar comandas">
+                </li>
+            </ul>        
+        </form>
         <div class="row">
             <div class="col-lg-12 mx-auto">
                 <ul class="list-group shadow">

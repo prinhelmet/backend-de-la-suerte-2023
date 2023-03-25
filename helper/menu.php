@@ -31,10 +31,10 @@
                         <label><?= CARTA['plato-6']; ?></label>
                         <input type="number" name="plato-6" id="plato-6" min="0" value="0">
                     </li>
-                    <li class="list-group-item">
-                        <input type="hidden" name="req" value="neworder" readonly>
+                    <li class="">
                         <input type="submit" value="Comandar">
                     </li>
+                    <input type="hidden" name="req" value="neworder" readonly>
                 </ul>
             </form>
         </div>

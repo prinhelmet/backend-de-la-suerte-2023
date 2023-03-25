@@ -62,7 +62,7 @@ function parseDishes($arraydishes){
     foreach($arraydishes as $key => $value){
         if(str_starts_with($key, 'plato-') && $value > 0){
             $dish['name'] = CARTA[$key];
-            $dish['quantity'] = $value;
+            $dish['quantity'] = (int)$value;
             $dishes[] = $dish;
         }
     }

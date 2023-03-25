@@ -134,3 +134,7 @@ a.nav-link {
 .flex-inner li {
     width: 100px;
 }
+
+.options {
+    margin: 0 0 1em;
+}
