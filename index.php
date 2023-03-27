@@ -56,10 +56,14 @@ $dotenv->safeLoad();
                 deleteorders($mysqli);
                 break;
 
-            case 'dispachorder':
-                $result = dispachorder($mysqli, $_POST);
-                break;
+                case 'dispachorder':
+                    $result = dispachorder($mysqli, $_POST);
+                    break;
 
+                case 'destrollear':
+                    $result = unhack($mysqli, $_POST);
+                    break;
+                
             default:
                 break;
         }

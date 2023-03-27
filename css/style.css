@@ -40,6 +40,11 @@ a.nav-link {
     color: white;
 }
 
+a.nav-link:hover {
+    background-color: #666;
+    color: red;
+}
+
 .nav-fill .nav-item {
     margin: 0 0.5em
 }
